@@ -1,5 +1,6 @@
 package gdufs.challenge.web.controller;
-
+import java.util.HashMap;
+import java.util.Map;
 import gdufs.challenge.web.model.Info;
 import gdufs.challenge.web.model.UserInfo;
 import java.io.ByteArrayInputStream;
@@ -68,7 +69,7 @@ public class MainController {
 
     private Object deserialize(String base64data) {
         try {
-            ObjectInputStream ois = new SerialKiller(new ByteArrayInputStream(Base64.getDecoder().decode(base64data)), "serialkiller.conf");
+            ObjectInputStream ois = new SerialKiller(new ByteArrayInputStream(Base64.getDecoder().decode(base64data)), "/Users/spencer/IdeaProjects/gdufs/src/main/java/gdufs/challenge/web/controller/serialkiller.conf");
             Object obj = ois.readObject();
             ois.close();
             return obj;
